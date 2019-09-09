@@ -1,0 +1,56 @@
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.DatabaseContext\bin\Debug\InfinityDotCom.DatabaseContext.dll.config
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.DatabaseContext\bin\Debug\InfinityDotCom.DatabaseContext.dll
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.DatabaseContext\bin\Debug\InfinityDotCom.DatabaseContext.pdb
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.DatabaseContext\bin\Debug\EntityFramework.dll
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.DatabaseContext\bin\Debug\EntityFramework.SqlServer.dll
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.DatabaseContext\bin\Debug\InfinityDotCom.Models.dll
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.DatabaseContext\bin\Debug\InfinityDotCom.Models.pdb
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.DatabaseContext\bin\Debug\EntityFramework.xml
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.DatabaseContext\bin\Debug\EntityFramework.SqlServer.xml
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.DatabaseContext\obj\Debug\InfinityDotCom.DatabaseContext.csprojAssemblyReference.cache
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.DatabaseContext\obj\Debug\InfinityDotCom.DatabaseContext.csproj.CoreCompileInputs.cache
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.DatabaseContext\obj\Debug\InfinityDotCom.DatabaseContext.csproj.CopyComplete
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.DatabaseContext\obj\Debug\InfinityDotCom.DatabaseContext.dll
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.DatabaseContext\obj\Debug\InfinityDotCom.DatabaseContext.pdb
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.DatabaseContext\obj\Debug\InfinityDotCom.DatabaseContext.Migrations.initialMigration.resources
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.DatabaseContext\obj\Debug\InfinityDotCom.DatabaseContext.csproj.GenerateResource.cache
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.DatabaseContext\obj\Debug\InfinityDotCom.DatabaseContext.Migrations.invoiceAndPurchaseModelAdd.resources
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.DatabaseContext\obj\Debug\InfinityDotCom.DatabaseContext.Migrations.addSalesModel.resources
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.DatabaseContext\obj\Debug\InfinityDotCom.DatabaseContext.Migrations.addDiscountInSalesProduct.resources
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.DatabaseContext\obj\Debug\InfinityDotCom.DatabaseContext.Migrations.addDataAnnotationInProductModel.resources
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.DatabaseContext\obj\Debug\InfinityDotCom.DatabaseContext.Migrations.a.resources
+E:\ASP DOT NET\InfinityDotCom\InfinityDotCom.DatabaseContext\obj\Debug\InfinityDotCom.DatabaseContext.Migrations.b.resources
+C:\Users\Kathal\Desktop\PROJECT2\InfinityDotCom\InfinityDotCom.DatabaseContext\bin\Debug\InfinityDotCom.DatabaseContext.dll.config
+C:\Users\Kathal\Desktop\PROJECT2\InfinityDotCom\InfinityDotCom.DatabaseContext\bin\Debug\InfinityDotCom.DatabaseContext.dll
+C:\Users\Kathal\Desktop\PROJECT2\InfinityDotCom\InfinityDotCom.DatabaseContext\bin\Debug\InfinityDotCom.DatabaseContext.pdb
+C:\Users\Kathal\Desktop\PROJECT2\InfinityDotCom\InfinityDotCom.DatabaseContext\bin\Debug\EntityFramework.dll
+C:\Users\Kathal\Desktop\PROJECT2\InfinityDotCom\InfinityDotCom.DatabaseContext\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Kathal\Desktop\PROJECT2\InfinityDotCom\InfinityDotCom.DatabaseContext\bin\Debug\InfinityDotCom.Models.dll
+C:\Users\Kathal\Desktop\PROJECT2\InfinityDotCom\InfinityDotCom.DatabaseContext\bin\Debug\InfinityDotCom.Models.pdb
+C:\Users\Kathal\Desktop\PROJECT2\InfinityDotCom\InfinityDotCom.DatabaseContext\bin\Debug\EntityFramework.xml
+C:\Users\Kathal\Desktop\PROJECT2\InfinityDotCom\InfinityDotCom.DatabaseContext\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Kathal\Desktop\PROJECT2\InfinityDotCom\InfinityDotCom.DatabaseContext\obj\Debug\InfinityDotCom.DatabaseContext.csprojAssemblyReference.cache
+C:\Users\Kathal\Desktop\PROJECT2\InfinityDotCom\InfinityDotCom.DatabaseContext\obj\Debug\InfinityDotCom.DatabaseContext.csproj.CoreCompileInputs.cache
+C:\Users\Kathal\Desktop\PROJECT2\InfinityDotCom\InfinityDotCom.DatabaseContext\obj\Debug\InfinityDotCom.DatabaseContext.csproj.CopyComplete
+C:\Users\Kathal\Desktop\PROJECT2\InfinityDotCom\InfinityDotCom.DatabaseContext\obj\Debug\InfinityDotCom.DatabaseContext.dll
+C:\Users\Kathal\Desktop\PROJECT2\InfinityDotCom\InfinityDotCom.DatabaseContext\obj\Debug\InfinityDotCom.DatabaseContext.pdb
+C:\Users\Kathal\Desktop\PROJECT2\InfinityDotCom\InfinityDotCom.DatabaseContext\obj\Debug\InfinityDotCom.DatabaseContext.Migrations.all.resources
+C:\Users\Kathal\Desktop\PROJECT2\InfinityDotCom\InfinityDotCom.DatabaseContext\obj\Debug\InfinityDotCom.DatabaseContext.csproj.GenerateResource.cache
+C:\Users\Kathal\Desktop\PROJECT2\InfinityDotCom\InfinityDotCom.DatabaseContext\obj\Debug\InfinityDotCom.DatabaseContext.Migrations.second.resources
+C:\Users\Kathal\Desktop\PROJECT2\InfinityDotCom\InfinityDotCom.DatabaseContext\obj\Debug\InfinityDotCom.DatabaseContext.Migrations.thired.resources
+D:\InfinityDotCom (2)\InfinityDotCom\InfinityDotCom.DatabaseContext\bin\Debug\InfinityDotCom.DatabaseContext.dll.config
+D:\InfinityDotCom (2)\InfinityDotCom\InfinityDotCom.DatabaseContext\bin\Debug\InfinityDotCom.DatabaseContext.dll
+D:\InfinityDotCom (2)\InfinityDotCom\InfinityDotCom.DatabaseContext\bin\Debug\InfinityDotCom.DatabaseContext.pdb
+D:\InfinityDotCom (2)\InfinityDotCom\InfinityDotCom.DatabaseContext\bin\Debug\EntityFramework.dll
+D:\InfinityDotCom (2)\InfinityDotCom\InfinityDotCom.DatabaseContext\bin\Debug\EntityFramework.SqlServer.dll
+D:\InfinityDotCom (2)\InfinityDotCom\InfinityDotCom.DatabaseContext\bin\Debug\InfinityDotCom.Models.dll
+D:\InfinityDotCom (2)\InfinityDotCom\InfinityDotCom.DatabaseContext\bin\Debug\InfinityDotCom.Models.pdb
+D:\InfinityDotCom (2)\InfinityDotCom\InfinityDotCom.DatabaseContext\bin\Debug\EntityFramework.xml
+D:\InfinityDotCom (2)\InfinityDotCom\InfinityDotCom.DatabaseContext\bin\Debug\EntityFramework.SqlServer.xml
+D:\InfinityDotCom (2)\InfinityDotCom\InfinityDotCom.DatabaseContext\obj\Debug\InfinityDotCom.DatabaseContext.csprojAssemblyReference.cache
+D:\InfinityDotCom (2)\InfinityDotCom\InfinityDotCom.DatabaseContext\obj\Debug\InfinityDotCom.DatabaseContext.csproj.CoreCompileInputs.cache
+D:\InfinityDotCom (2)\InfinityDotCom\InfinityDotCom.DatabaseContext\obj\Debug\InfinityDotCom.DatabaseContext.csproj.CopyComplete
+D:\InfinityDotCom (2)\InfinityDotCom\InfinityDotCom.DatabaseContext\obj\Debug\InfinityDotCom.DatabaseContext.dll
+D:\InfinityDotCom (2)\InfinityDotCom\InfinityDotCom.DatabaseContext\obj\Debug\InfinityDotCom.DatabaseContext.pdb
+D:\InfinityDotCom (2)\InfinityDotCom\InfinityDotCom.DatabaseContext\obj\Debug\InfinityDotCom.DatabaseContext.Migrations.xvxfg.resources
+D:\InfinityDotCom (2)\InfinityDotCom\InfinityDotCom.DatabaseContext\obj\Debug\InfinityDotCom.DatabaseContext.csproj.GenerateResource.cache

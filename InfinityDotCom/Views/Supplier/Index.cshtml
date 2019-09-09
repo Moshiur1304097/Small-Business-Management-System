@@ -1,0 +1,102 @@
+﻿@model List<InfinityDotCom.Models.Models.Supplier>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card">
+                <form class="form-horizontal" action="/supplier/index" method="post">
+                    <div class="card-body">
+                        <h4 class="card-title card-header">Add Supplier</h4>
+                        <div class="row form-group">
+                            <label class="col-sm-3 text-right control-label col-form-label" for="SupplierCode">Code</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" id="SupplierCode" placeholder="Enter Code" name="SupplierCode" required>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <label class="col-sm-3 text-right control-label col-form-label" for="SupplierName">Name</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" id="SupplierName" placeholder="Enter Name" name="SupplierName"required>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <label class="col-sm-3 text-right control-label col-form-label" for="SupplierAddress">Address</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" id="SupplierAddress" placeholder="Enter Address" name="SupplierAddress">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <label class="col-sm-3 text-right control-label col-form-label" for="SupplierEmail">Email</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" id="SupplierEmail" placeholder="Enter Email" name="SupplierEmail"required>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <label class="col-sm-3 text-right control-label col-form-label" for="SupplierContact">Contact</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" id="SupplierContact" placeholder="Enter Contact" name="SupplierContact"required>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <label class="col-sm-3 text-right control-label col-form-label" for="SupplierContactPerson">Contact Person</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" id="SupplierContactPerson" placeholder="Enter Contact Person" name="SupplierContactPerson">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border-top">
+                        <div class="row card-body">
+                            <div class="col-md-9"></div>
+                            <div class="col-md-3">
+                                <button type="submit" class="btn btn-primary">Add Supplier</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container" style="margin-top : 15px; margin-bottom : 250px;">
+    <table class="table table-bordered table-hover">
+        <thead class="bg-info text-center text-white">
+            <tr>
+                <th>SL</th>
+                <th>Code</th>
+                <th>Name        </th>
+                <th>Address</th>
+                <th>Email</th>
+                <th>Contact</th>
+                <th>Contact Person</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody class="text-center" style="background-color : lightgray;">
+            @{ int sl = 1;}
+            @foreach (var supplier in Model)
+            {
+                <tr>
+                    <td>@(sl++)</td>
+                    <td>@supplier.SupplierCode</td>
+                    <td>@supplier.SupplierName</td>
+                    <td>@supplier.SupplierAddress</td>
+                    <td>@supplier.SupplierEmail</td>
+                    <td>@supplier.SupplierContact</td>
+                    <td>@supplier.SupplierContactPerson</td>
+                    <td>
+                        <a href="/supplier/Edit?ID=@supplier.ID" class="btn btn-primary btn-xs" title="Edit">
+                            <span class="glyphicon glyphicon-edit">Edit</span>
+                        </a>
+                        <a href="/supplier/Delete?ID=@supplier.ID" onclick="return confirm('Are you sure to delete this !!');" class="btn btn-danger btn-xs" title="Delete">
+                            <span class="glyphicon glyphicon-trash">Delete</span>
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>

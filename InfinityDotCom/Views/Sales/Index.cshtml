@@ -1,0 +1,279 @@
+﻿@model InfinityDotCom.Models.SalesVM
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row" style="margin-bottom : 10px;">
+        <div class="col-md-2"></div>
+        <div class="col-md-7">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title card-header" style="margin-bottom : 25px;">Customer</h4>
+                    <div class="row form-group">
+                        <label class="col-sm-3 text-right control-label col-form-label" for="SalesCustomerID">Customer</label>
+                        <div class="col-sm-9">
+                            <select class="col-md-12 rounded" name="SalesCustomerID" id="SalesCustomerID" style="height : 40px;">
+                                <option value="none" selected disabled hidden>--Select--</option>
+                                @foreach (var customer in Model.Customers)
+                                {
+                                    <option name="SalesCustomerID" value="@customer.ID">@customer.CustomerName</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label class="col-sm-3 text-right control-label col-form-label" for="SalesDate">Date</label>
+                        <div class="col-md-9">
+                            <input type="date" class="form-control" id="SalesDate" placeholder="Sales Date" name="SalesDate">
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label class="col-sm-3 text-right control-label col-form-label" for="SalesCustomerLP">Loyality Point</label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" id="SalesCustomerLP" name="SalesCustomerLP" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-bottom : 25px;">
+        <div class="col-md-2"></div>
+        <div class="col-md-7">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title card-header" style="margin-bottom : 25px;">Product</h4>
+                    <div class="row form-group">
+                        <label class="col-sm-3 text-right control-label col-form-label" for="SalesProductID">Product</label>
+                        <div class="col-sm-9">
+                            <select class="col-md-12 rounded" name="SalesProductID" id="SalesProductID" style="height : 40px;">
+                                <option value="none" selected disabled hidden>--Select--</option>
+                                @foreach (var product in Model.Products)
+                                {
+                                    <option name="SalesProductID" value="@product.ID">@product.ProductName</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label class="col-sm-3 text-right control-label col-form-label" for="SalesProductAQ">Available Quantity</label>
+                        <div class="col-md-9">
+                            <input type="number" class="form-control" id="SalesProductAQ" name="SalesProductAQ" readonly>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label class="col-sm-3 text-right control-label col-form-label" for="SalesProductQuantity">Quantity</label>
+                        <div class="col-md-9">
+                            <input type="number" class="form-control" id="SalesProductQuantity" name="SalesProductQuantity">
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label class="col-sm-3 text-right control-label col-form-label" for="SalesProductMRP">MRP (Tk)</label>
+                        <div class="col-md-9">
+                            <input type="number" class="form-control" id="SalesProductMRP" name="SalesProductMRP">
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label class="col-sm-3 text-right control-label col-form-label" for="SalesProductTotalMRP">Total MRP (Tk)</label>
+                        <div class="col-md-9">
+                            <input type="number" class="form-control" id="SalesProductTotalMRP" name="SalesProductTotalMRP">
+                        </div>
+                    </div>
+                </div>
+                <div class="row card-body">
+                    <div class="col-sm-9"></div>
+                    <div class="col-sm-3">
+                        <button type="button" id="addButton" class="btn btn-primary" style="width : 100px;">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <form class="form-horizontal" action="/sales/index" method="POST">
+        <div class="row container" style="margin-top : 15px;">
+            <table class="table table-bordered table-hover">
+                <thead class="bg-info text-center text-white">
+                    <tr>
+                        <th>SL</th>
+                        <th>Product(Code)</th>
+                        <th>Quantity</th>
+                        <th>MRP(Tk)</th>
+                        <th>Total MRP(Tk)</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody" class="text-center" style="background-color : lightgray;"></tbody>
+            </table>
+        </div>
+        <div class="container row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-9">
+                <div class="row form-group">
+                    <label class="col-sm-6 text-right control-label col-form-label" for="GrandTotal">Grand Total (Tk)</label>
+                    <div class="col-sm-6">
+                        <input type="number" class="form-control" id="GrandTotal" name="GrandTotal" readonly>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <label class="col-sm-6 text-right control-label col-form-label" for="Discount">Discount (%)</label>
+                    <div class="col-sm-6">
+                        <input type="number" class="form-control" id="Discount" name="Discount" readonly>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <label class="col-sm-6 text-right control-label col-form-label" for="DiscountAmount">Discount Amount (Tk)</label>
+                    <div class="col-sm-6">
+                        <input type="number" class="form-control" id="DiscountAmount" name="DiscountAmount" readonly>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <label class="col-sm-6 text-right control-label col-form-label" for="PayableAmount">Payable Amount (Tk)</label>
+                    <div class="col-sm-6">
+                        <input type="number" class="form-control" id="PayableAmount" name="PayableAmount" readonly>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row card-body">
+            <div class="col-sm-9"></div>
+            <div class="col-sm-3">
+                <button type="submit" id="submitButton" class="btn btn-primary" style="width : 150px;">Save</button>
+            </div>
+        </div>
+    </form>
+
+
+</div>
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $("#SalesCustomerID").change(function () {
+            var CustomerID = $("#SalesCustomerID").val();
+            var jsonData = {
+                CustomerID: CustomerID
+            };
+            $.ajax({
+                url: "/customer/getCustomerLP",
+                type: "POST",
+                data: jsonData,
+                success: (response) => {
+                    $('#SalesCustomerLP').val(response.CustomerLP);
+                }
+            });
+        });
+
+        var totalPurchase = 0;
+        var totalSales = 0;
+        var total = 0;
+        var MRP = 0;
+
+        $("#SalesProductID").change(function () {
+            var ProductID = $("#SalesProductID").val();
+            var jsonData = {
+                ProductID: ProductID
+            };
+            totalPurchase = 0;
+            $.ajax({
+                url: "/purchase/getProductQ",
+                type: "POST",
+                data: jsonData,
+                success: (response) => {
+                    $.each(response, (index, product) => {
+                        var q = parseInt(product.Quantity);
+                        totalPurchase += q;
+                        MRP = product.NewMRP;
+                    });
+                    $('#SalesProductMRP').val(MRP);
+                }
+            });
+            totalSales = 0;
+            $.ajax({
+                url: "/sales/getProductQ",
+                type: "POST",
+                data: jsonData,
+                success: (response) => {
+                    $.each(response, (index, product) => {
+                        var q = parseInt(product.Quantity);
+                        totalSales += q;
+                    });
+                    total = totalPurchase - totalSales;
+                    $('#SalesProductAQ').val(total);
+                }
+            });
+            $("#SalesProductQuantity").focusout(function () {
+                var price = $('#SalesProductMRP').val();
+                var quantity = $('#SalesProductQuantity').val();
+                if (price != "" && quantity != "")
+                    $('#SalesProductTotalMRP').val(price * quantity);
+            });
+            $("#SalesProductMRP").focusout(function () {
+                var price = $('#SalesProductMRP').val();
+                var quantity = $('#SalesProductQuantity').val();
+                if (price != "" && quantity != "")
+                    $('#SalesProductTotalMRP').val(price * quantity);;
+            });
+        });
+
+        var i = 0;
+        var grandTotal = 0;
+        var discount = 0;
+        var discountAmount = 0;
+        var payableAmount = 0;
+
+        $("#addButton").click(function () {
+            var customerID = $("#SalesCustomerID").val();
+            var date = $("#SalesDate").val();
+            var lp = Number($("#SalesCustomerLP").val());
+
+            var productID = $("#SalesProductID").val();
+            var productName = $("#SalesProductID").children("option:selected").text();
+            var quantity = $("#SalesProductQuantity").val();
+            var mRP = $("#SalesProductMRP").val();
+            var totalMRP = $("#SalesProductTotalMRP").val();
+
+            var customerIDHidden = "<input type='hidden' name='SalesProducts[" + i + "].CustomerID' value='" + customerID + "'/>";
+            var dateHidden = "<input type='hidden' name='SalesProducts[" + i + "].Date' value='" + date + "'/>";
+
+            var productIDHidden = "<input type='hidden' name='SalesProducts[" + i + "].ProductID' value='" + productID + "'/>";
+            var productNameHidden = "<input type='hidden' name='SalesProducts[" + i + "].ProductName' value='" + productName + "'/>";
+            var quantityHidden = "<input type='hidden' name='SalesProducts[" + i + "].Quantity' value='" + quantity + "'/>";
+            var mRPHidden = "<input type='hidden' name='SalesProducts[" + i + "].MRP' value='" + mRP + "'/>";
+            var totalMRPHidden = "<input type='hidden' name='SalesProducts[" + i + "].TotalMRP' value='" + totalMRP + "'/>";
+
+            grandTotal += Number(totalMRP);
+            discount = (lp / 10.0);
+            discountAmount = ((grandTotal * discount) / 100.0);
+            payableAmount = grandTotal - discountAmount;
+
+            var discountHidden = "<input type='hidden' name='SalesProducts[" + i + "].Discount' value='" + discount + "'/>";
+
+            var htmlTable = "<tr>" +
+                "<td>" + customerIDHidden + dateHidden + (++i) + "</td>" +
+                "<td>" + productIDHidden + productNameHidden + productName + "</td>" +
+                "<td>" + quantityHidden + quantity + "</td>" +
+                "<td>" + mRPHidden + mRP + "</td>" +
+                "<td>" + discountHidden + totalMRPHidden + totalMRP + "</td>" +
+                "<td>" +
+                "<a href=' / supplier / Edit' class='btn btn-primary btn - xs' title='Edit'>" +
+                "<span class='glyphicon glyphicon - edit'>Edit</span>" +
+                "</a>" +
+                "<a href=' / supplier / Delete' class='btn btn-danger btn - xs' title='Delete'>" +
+                "<span class='glyphicon glyphicon - trash'>Delete</span>" +
+                "</a>" +
+                "</td>" +
+                "</tr>";
+            $("#tableBody").append(htmlTable);
+
+            $("#GrandTotal").val(grandTotal);
+            $("#Discount").val(discount);
+            $("#DiscountAmount").val(discountAmount);
+            $("#PayableAmount").val(payableAmount);
+
+        });
+    });
+</script>
